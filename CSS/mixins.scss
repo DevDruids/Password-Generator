@@ -1,0 +1,14 @@
+@mixin hoverEffect{
+  color: #80ff00;
+  transform: scale(1.1);
+}
+
+@mixin activeEffect{
+  transform: scale(0.95);
+}
+
+@mixin displayeFlexCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

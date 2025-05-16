@@ -1,0 +1,68 @@
+@import url(mixins.scss);
+
+body{
+  background-color: #121212;
+  color: #f1f1f1;
+  font-family: "Inter Tight", sans-serif;
+  // font-family: "Fira Code", monospace;
+
+  header{
+    height: 10rem;
+    background-color: #a9a9a9;
+    @include displayeFlexCenter;
+
+    .wrapper{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+
+      .logo__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        h1{
+          font-size: 18px;
+          font-weight: bold;
+          font-family: "Fira Code", monospace;
+        }
+      }
+
+      .nav-list{
+        @include displayeFlexCenter;
+        gap: 7rem;
+        font-size: 16px;
+
+        a{
+          text-decoration: none;
+          color: #f1f1f1;
+          transition: all .3s ease;
+        }
+
+        a:hover{
+          @include hoverEffect;
+        }
+      }
+
+      .generate__button{
+        background-color: #fff;
+        font-size: 16px;
+        text-align: center;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 25px;
+        transition: all .3s ease;
+      }
+
+      .generate__button:hover{
+        @include hoverEffect;
+      }
+
+      .generate__button:active{
+        @include activeEffect;
+      }
+    }
+  }
+}
