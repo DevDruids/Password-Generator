@@ -162,6 +162,7 @@ body{
             height: 23px;
             width: 268px;
             margin-bottom: 25px;
+            margin-left: 15px;
           }
 
           .card-subtitle{
@@ -173,6 +174,7 @@ body{
           .card-subtitle-play{
             font-size: 48px;
             margin-bottom: 25px;
+            margin-left: 15px;
           }
 
           .card-icon{
@@ -194,6 +196,12 @@ body{
           }
         }
 
+        .card:last-child{
+          display: flex;
+          justify-content: start;
+          align-items: end;
+        }
+
         .card:last-child:hover{
           transform: none;
           box-shadow: none;
@@ -208,9 +216,75 @@ body{
   }
   footer{
     background-color: #a9a9a9;
+    height: 40vh;
+    position: relative;
     margin-top: 25px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    .nav-footer-wrapper{
+      .nav-footer-list{
+        padding-top: 15vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+
+        .column-footer{
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          .nav-item{
+            transition: all .3s ease;
+            a{
+              text-decoration: none;
+              color: #030303;
+              font-size: 18px;
+            }
+          }
+
+          .nav-item:hover{
+            transform: scale(1.05);
+          }
+
+          .nav-item-title{
+            a{
+              font-size: 24px;
+              text-decoration: none;
+              font-weight: bold;
+              color: #030303;
+            }
+          }
+        }
+
+        .table-footer{
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          gap: 50px;
+
+          .column-footer{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            li{
+              transition: all .3s ease;
+              a{
+                text-decoration: none;
+                font-size: 18px;
+                color: #030303;
+              }
+            }
+            .nav-item-title{
+              a{
+                font-weight: bold;
+                color: #030303;
+              }
+            }
+
+            .nav-item:hover{
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
   }
 }

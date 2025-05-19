@@ -29,7 +29,9 @@
           <a href="#"><li class="list-item">Ціноутворення</li></a>
         </ul>
       </nav>
-      <button class="generate__button" id="generateBtn">Generate</button>
+      <a href="./password-generating/passGener.html">
+        <button class="generate__button" id="generateBtn">Генерувати</button>
+      </a>
     </div>
   </header>
   <main>
@@ -37,13 +39,13 @@
       <div class="wrapper">
         <div class="content-mainSect">
           <h1>
-            Set your preferences for a secure password.
+            Встановіть свої параметри для безпечного пароля.
           </h1>
           <div class="subtitle">
-            Customize password length and include uppercase, lowercase, numbers, and symbols
+            Налаштуйте довжину пароля та додайте великі та малі літери, цифри та символи.
           </div>
-          <button class="generate__btn">Generate</button>
-          <button class="clear__btn">Clear</button>
+          <a href="./password-generating/passGener.html"><button class="generate__btn">Генерувати</button></a>
+          <button class="clear__btn">Скинути</button>
         </div>
         <div class="icon-wrapper">
           <svg xmlns="http://www.w3.org/2000/svg" width="300" height="300" fill="currentColor" class="bi bi-database-fill-`lock" viewBox="0 0 16 16">
@@ -59,7 +61,7 @@
         <div class="cards-list">
           <div class="card">
             <div class="card-text-wrapper">
-              <div class="card-title">Active users</div>
+              <div class="card-title">Активні користувачі</div>
               <div class="card-subtitle">1M+</div>
             </div>
             <div class="card-icon">
@@ -71,7 +73,7 @@
           </div>
           <div class="card">
             <div class="card-text-wrapper">
-              <div class="card-title">Passwords generated</div>
+              <div class="card-title">Згенеровані паролі</div>
               <div class="card-subtitle">5TB+</div>
             </div>
             <div class="card-icon">
@@ -82,7 +84,7 @@
           </div>
           <div class="card">
             <div class="card-text-wrapper">
-              <div class="card-title">Passwords created</div>
+              <div class="card-title">Паролі створено</div>
               <div class="card-subtitle">6M+</div>
             </div>
 
@@ -93,10 +95,10 @@
               </svg>
             </div>
           </div>
-          <div class="card">
+          <div class="card" id="generateCard">
             <div class="card-text-wrapper">
-              <div class="card-title-play">Generate now</div>
-              <div class="card-subtitle-play">Generate</div>
+              <div class="card-title-play">Згенеруйте зараз</div>
+              <div class="card-subtitle-play">Генерувати</div>
             </div>
             <div class="card-icon-play">
               <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
@@ -110,33 +112,35 @@
   </main>
   <footer>
     <div class="nav-footer-wrapper">
-      <ul class="nav-footer-wrapper">
+      <ul class="nav-footer-list">
         <div class="column-footer">
-          <li class="nav-item-title"><a href="#">Password Generator</a></li>
-          <li class="nav-item"><a href="#">Trusted for Secure Passwords</a></li>
+          <li class="nav-item-title"><a href="#">Генератор паролів</a></li>
+          <li class="nav-item"><a href="#">Надійні паролі</a></li>
         </div>
         <div class="table-footer">
           <div class="column-footer">
-          <li class="nav-item-title"><a href="#">Security Features</a></li>
-          <li class="nav-item"><a href="#">About SecurePass</a></li>
-          <li class="nav-item"><a href="#">Career Opportunities</a></li>
-          <li class="nav-item"><a href="#">Contact Support</a></li>
-          <li class="nav-item"><a href="#">Latest Blog Updates</a></li>
+            <li class="nav-item-title"><a href="#">Функції безпеки</a></li>
+            <li class="nav-item"><a href="#">Про SecurePass</a></li>
+            <li class="nav-item"><a href="#">Кар'єрні можливості</a></li>
+            <li class="nav-item"><a href="#">Зверніться до служби підтримки</a></li>
+            <li class="nav-item"><a href="#">Останні оновлення блогу</a></li>
+          </div>
+          <div class="column-footer">
+            <li class="nav-item-title"><a href="#">Підтримка спільноти</a></li>
+            <li class="nav-item"><a href="#">Довідка та підтримка</a></li>
+            <li class="nav-item"><a href="#">Оновити до PRO</a></li>
+          </div>
+          <div class="column-footer">
+            <li class="nav-item-title"><a href="#">Слідкуйте за SecurePass</a></li>
+            <li class="nav-item"><a href="#">Оновлення Facebook</a></li>
+            <li class="nav-item"><a href="#">Оновлення Twitter</a></li>
+            <li class="nav-item"><a href="#">Дописи в Instagram</a></li>
+          </div>
         </div>
-        <div class="column-footer">
-          <div class="nav-item-title"><a href="#">Community Support</a></div>
-          <li class="nav-item"><a href="#">Help & Support</a></li>
-          <li class="nav-item"><a href="#">Upgrade to PRO</a></li>
-        </div>
-        <div class="column-footer">
-          <div class="nav-item-title"><a href="#">Follow SecurePass</a></div>
-          <li class="nav-item"><a href="#">Facebook Updates</a></li>
-          <li class="nav-item"><a href="#">Twitter Updates</a></li>
-          <li class="nav-item"><a href="#">Instagram Posts</a></li>
-        </div>
-        </div>
+      </ul>
     </div>
   </footer>
   <script src="./JS/app.js"></script>
 </body>
 </html>
+

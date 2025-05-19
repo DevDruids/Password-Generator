@@ -1,0 +1,61 @@
+body{
+  background-color: #121212;
+  color: #f1f1f1;
+  font-family: "Inter Tight", sans-serif;
+  // font-family: "Fira Code", monospace;
+
+  header{
+    height: 10rem;
+    background-color: #a9a9a9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .wrapper__header{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+
+      .logo__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+        h1{
+          font-size: 18px;
+          font-weight: bold;
+          font-family: "Fira Code", monospace;
+        }
+      }
+
+      .nav-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7rem;
+        font-size: 16px;
+
+        a{
+          text-decoration: none;
+          color: #f1f1f1;
+          transition: all .3s ease;
+        }
+
+        a:hover{
+          color: #80ff00;
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+  main{
+    section{
+      height: 75vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

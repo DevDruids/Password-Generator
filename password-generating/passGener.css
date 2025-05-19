@@ -1,0 +1,82 @@
+body {
+  background-color: #121212;
+  color: #f1f1f1;
+  font-family: "Inter Tight", sans-serif;
+}
+body header {
+  height: 10rem;
+  background-color: #a9a9a9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body header .wrapper__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+body header .wrapper__header .logo__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+body header .wrapper__header .logo__wrapper h1 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Fira Code", monospace;
+}
+body header .wrapper__header .nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 7rem;
+  font-size: 16px;
+}
+body header .wrapper__header .nav-list a {
+  text-decoration: none;
+  color: #f1f1f1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+body header .wrapper__header .nav-list a:hover {
+  color: #80ff00;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+body main section {
+  height: 75vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
