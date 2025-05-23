@@ -13,12 +13,38 @@ function updateBackground() {
   const percent = ((value - min) / (max - min)) * 100;
   rangeInput.style.background = `linear-gradient(to right, #80ff00 ${percent}%, #ccc ${percent}%)`;
 }
-rangeInput.addEventListener("input", updateBackground);
-updateBackground();
 
 function updatePasswordLength(){
   passwordLengthText.innerHTML = rangeInput.value;
 }
 
+function checkPasswordOptions(){
+  return;
+}
+
+uppercaseCheckBox.addEventListener('click', () => {
+  uppercaseCheckBox.classList.add('active');
+  if(uppercaseCheckBox.classList === acrive)
+})
+
+lowerCheckBox.addEventListener('click', () => {
+  lowerCheckBox.classList.add('active');
+  if(uppercaseCheckBox.classList === acrive)
+})
+
+numbersCheckBox.addEventListener('click', () => {
+  numbersCheckBox.classList.add('active');
+  if(uppercaseCheckBox.classList === acrive)
+})
+
+symbolsCheckBox.addEventListener('click', () => {
+  symbolsCheckBox.classList.add('active');
+  if(uppercaseCheckBox.classList === acrive)
+})
+
+rangeInput.addEventListener("input", updateBackground);
+updateBackground();
+
 rangeInput.addEventListener("input", updatePasswordLength);
 updatePasswordLength();
+
