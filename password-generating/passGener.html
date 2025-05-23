@@ -38,10 +38,35 @@
           <h1>Налаштуйте свій пароль</h1>
         </div>
         <form class="passwordOptions">
-          
+          <div class="range-wrapper">
+            <label for="inputRange">Довжина пароля: <span class="passwordLength" id="passwordLength">0</span></label>
+            <input type="range" id="inputRange" min="8" max="32">
+          </div>
+          <div class="checkbox-list">
+            <div class="checkbox">
+              <label for="uppercaseCheckBox">Include Uppercase Letters</label>
+              <input type="checkbox" id="uppercaseCheckBox">
+            </div>
+            <div class="checkbox">
+              <label for="lowerCheckBox">Include Lowercase Letters</label>
+              <input type="checkbox" id="lowerCheckBox">
+            </div>
+            <div class="checkbox">
+              <label for="numbersCheckBox">Include Numbers</label>
+              <input type="checkbox" id="numbersCheckBox">
+            </div>
+            <div class="checkbox">
+              <label for="symbolsCheckBox">Include Symbols</label>
+              <input type="checkbox" id="symbolsCheckBox">
+            </div>
+          </div>
+          <button id="generatePassword">
+            Згенерувати пароль
+          </button>
         </form>
       </div>
     </section>
   </main>
+  <script src="passGener.js"></script>
 </body>
 </html>

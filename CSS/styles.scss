@@ -23,10 +23,22 @@ body{
         align-items: center;
         gap: 25px;
 
+        a{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+        }
+
         h1{
           font-size: 18px;
           font-weight: bold;
           font-family: "Fira Code", monospace;
+
+          a{
+            text-decoration: none;
+            color: #fff;
+          }
         }
       }
 

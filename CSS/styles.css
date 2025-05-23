@@ -39,10 +39,26 @@ body header .wrapper__header .logo__wrapper {
           align-items: center;
   gap: 25px;
 }
+body header .wrapper__header .logo__wrapper a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+}
 body header .wrapper__header .logo__wrapper h1 {
   font-size: 18px;
   font-weight: bold;
   font-family: "Fira Code", monospace;
+}
+body header .wrapper__header .logo__wrapper h1 a {
+  text-decoration: none;
+  color: #fff;
 }
 body header .wrapper__header .nav-list {
   display: -webkit-box;

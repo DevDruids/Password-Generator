@@ -56,6 +56,66 @@ body{
       display: flex;
       justify-content: center;
       align-items: center;
+      
+      .box{
+        background-color: #a9a9a9;
+        height: 436px;
+        width: 800px;
+        border-radius: 25px;
+
+        .box-title{
+          padding-bottom: 80px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          margin-top: 15px;
+
+          h1{
+            font-size: 24px;
+            font-weight: bold;
+            font-family: "Inter Tight", sans-serif;
+          }
+        }
+
+        .passwordOptions{
+          margin-left: 20px;
+          margin-right: 20px;
+          display: flex;
+          flex-direction: column;
+
+          .range-wrapper{
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            gap: 10px;
+            margin-bottom: 2rem;
+
+            .passwordLength{
+              color: #80ff00;
+            }
+
+            input[type="range"]{
+              -webkit-appearance: none;
+              appearance: none;
+              width: 100%;
+              height: 6px;
+              background-color: #80ff00;
+              outline: none;
+              border-radius: 5px;
+
+              &::-webkit-slider-thumb{
+                -webkit-appearance: none;
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                cursor: pointer;
+                border: none;
+                background-color: #80ff00;
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
