@@ -1,10 +1,11 @@
 const rangeInput = document.getElementById('inputRange');
-const passwordLengthNumber = document.getElementById('passwordLength');
+const lengthPasswordSpan = document.getElementById('passwordLength');
 const uppercaseCheckBox = document.getElementById('uppercaseCheckBox');
 const lowerCheckBox = document.getElementById('lowerCheckBox');
 const numbersCheckBox = document.getElementById('numbersCheckBox');
 const symbolsCheckBox = document.getElementById('symbolsCheckBox');
 const generatePasswordBtn = document.getElementById('generatePassword');
+const generatePasswordWindow = document.getElementById('generatePassword');
 let uppercaseCheckBoxAnswer = ''; 
 let lowerCheckBoxAnswer = '';
 let numbersCheckBoxAnswer = '';
@@ -24,15 +25,57 @@ function updateBackground() {
 }
 
 function updatePasswordLength(){
-  passwordLengthNumber.innerHTML = rangeInput.value;
+  lengthPasswordSpan.innerHTML = rangeInput.value;
 }
 
 function checkPasswordOptions(){
-  if(uppercaseCheckBoxAnswer) characterPool += upperLetters;
-  if(lowerCheckBoxAnswer) characterPool += lowerLetters;
-  if(numbersCheckBoxAnswer) characterPool += numbers;
-  if(symbolsCheckBoxAnswer) characterPool += symbols;
-  console.log(characterPool)
+  characterPool = '';
+
+  if(uppercaseCheckBoxAnswer){
+    characterPool += upperLetters
+  }
+  else{
+    characterPool = characterPool
+      .split('')
+      .filter(char => !upperLetters.includes(char))
+      .join('');
+  }
+  if(lowerCheckBoxAnswer){
+    characterPool += lowerLetters
+  }
+  else{
+    characterPool = characterPool
+      .split('')
+      .filter(char => !lowerLetters.includes(char))
+      .join('');
+  }
+  if(numbersCheckBoxAnswer){
+    characterPool += numbers
+  }
+  else{
+    characterPool = characterPool
+      .split('')
+      .filter(char => !numbers.includes(char))
+      .join('');
+  }
+  if(symbolsCheckBoxAnswer){
+    characterPool += symbols
+  }
+  else{
+    characterPool = characterPool
+      .split('')
+      .filter(char => !symbols.includes(char))
+      .join('');
+  }
+}
+
+function generatePassword(characterPool){
+  const passwordLengthNumber =  Number(rangeInput.value);
+  let result = '';
+  for(let i = 0; i < passwordLengthNumber; i++){
+    const randomIndex = Math.floor(Math.random() * characterPool.length);
+    result += characterPool[randomIndex];
+  }
 }
 
 uppercaseCheckBox.addEventListener('click', () => {
@@ -81,6 +124,12 @@ symbolsCheckBox.addEventListener('click', () => {
     symbolsCheckBoxAnswer = true;
   }
   checkPasswordOptions();
+})
+
+generatePasswordBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  generatePassword(characterPool);
+  generatePasswordWindow.classList.add('hidden');
 })
 
 rangeInput.addEventListener("input", updateBackground);

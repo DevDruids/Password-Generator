@@ -80,6 +80,7 @@ body{
       align-items: center;
       
       .box{
+        display: block;
         background-color: #a9a9a9;
         height: 400px;
         width: 800px;
@@ -183,6 +184,11 @@ body{
             background-color: #0daa27;
           }
         }
+      }
+      .box.hidden{
+        opacity: 0;
+        visibility: none;
+        display: none;
       }
     }
   }
