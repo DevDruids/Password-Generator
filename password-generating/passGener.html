@@ -33,7 +33,7 @@
   </header>
   <main>
     <section class="generate-box">
-      <div class="box hidden" id="generatePassword">
+      <div class="box" id="generatePassword">
         <div class="box-title">
           <h1>Налаштуйте свій пароль</h1>
         </div>
@@ -60,10 +60,20 @@
               <input type="checkbox" id="symbolsCheckBox">
             </div>
           </div>
-          <button id="generatePassword">
+          <button id="generatePasswordBtn">
             Згенерувати пароль
           </button>
         </form>
+      </div>
+      <div class="generatedPassword-box">
+        <h1>Ваш створений пароль</h1>
+        <div class="generatedPassword-wrapper">
+          <span id="generatedPasswordText"></span>
+        </div>
+        <div class="button-container">
+          <button class="copyBtn" id="copyBtn">Копіювати</button>
+          <button class="generateBtn" id="generateBtn">Згенерувати</button>
+        </div>
       </div>
     </section>
   </main>

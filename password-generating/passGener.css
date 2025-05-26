@@ -111,6 +111,7 @@ body main section {
           align-items: center;
 }
 body main section .box {
+  display: block;
   background-color: #a9a9a9;
   height: 400px;
   width: 800px;
@@ -242,4 +243,79 @@ body main section .box .passwordOptions button {
 }
 body main section .box .passwordOptions button:hover {
   background-color: #0daa27;
+}
+body main section .box.hidden {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+}
+body main section .generatedPassword-box {
+  background-color: #a9a9a9;
+  height: 250px;
+  width: 400px;
+  border-radius: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body main section .generatedPassword-box .generatedPassword-wrapper {
+  display: inline-block;
+  background-color: #353535;
+  width: auto;
+  min-width: 300px;
+  height: 50px;
+  border-radius: 40px;
+  position: relative;
+}
+body main section .generatedPassword-box .generatedPassword-wrapper span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 50px;
+}
+body main section .generatedPassword-box .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+body main section .generatedPassword-box .button-container .copyBtn {
+  background-color: #fff;
+}
+body main section .generatedPassword-box .button-container .generateBtn {
+  background-color: #0dcb2d;
+  color: #fff;
+}
+body main section .generatedPassword-box .button-container .generateBtn, body main section .generatedPassword-box .button-container .copyBtn {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 25px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+body main section .generatedPassword-box .button-container .copyBtn:hover {
+  background-color: #dfdddd;
+}
+body main section .generatedPassword-box .button-container .generateBtn:hover {
+  background-color: #0daa27;
+}
+body main section .generatedPassword-box.hidden {
+  opacity: 0;
+  visibility: hidden;
+  display: none;
 }

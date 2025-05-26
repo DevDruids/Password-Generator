@@ -4,7 +4,7 @@ const uppercaseCheckBox = document.getElementById('uppercaseCheckBox');
 const lowerCheckBox = document.getElementById('lowerCheckBox');
 const numbersCheckBox = document.getElementById('numbersCheckBox');
 const symbolsCheckBox = document.getElementById('symbolsCheckBox');
-const generatePasswordBtn = document.getElementById('generatePassword');
+const generatePasswordBtn = document.getElementById('generatePasswordBtn');
 const generatePasswordWindow = document.getElementById('generatePassword');
 let uppercaseCheckBoxAnswer = ''; 
 let lowerCheckBoxAnswer = '';
@@ -14,7 +14,11 @@ const upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerLetters = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "123456789";
 const symbols = "!@#$%^&*()_+=-`~[]\{}|;':\",./<>?";
-let = characterPool = '';
+let characterPool = '';
+const copyBtn = document.getElementById('copyBtn');
+const generateBtn = document.getElementById('generateBtn');
+const generatePasswordText = document.getElementById('generatedPasswordText');
+const generatedBoxWindow = document.getElementById('generatedPassword-box');
 
 function updateBackground() {
   const value = rangeInput.value;
@@ -76,6 +80,7 @@ function generatePassword(characterPool){
     const randomIndex = Math.floor(Math.random() * characterPool.length);
     result += characterPool[randomIndex];
   }
+  generatePasswordText.innerHTML = result;
 }
 
 uppercaseCheckBox.addEventListener('click', () => {
@@ -130,6 +135,17 @@ generatePasswordBtn.addEventListener('click', (e) => {
   e.preventDefault();
   generatePassword(characterPool);
   generatePasswordWindow.classList.add('hidden');
+  generatedBoxWindow.classList.remove('hidden');
+})
+
+generateBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  generatedBoxWindow.classList.add('hidden');
+})
+
+copyBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  navigator.clipboard.writeText(generatePasswordText.innerHTML);
 })
 
 rangeInput.addEventListener("input", updateBackground);
