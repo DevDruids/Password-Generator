@@ -252,7 +252,7 @@ body main section .box.hidden {
 body main section .generatedPassword-box {
   background-color: #a9a9a9;
   height: 250px;
-  width: 400px;
+  width: 500px;
   border-radius: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -301,15 +301,15 @@ body main section .generatedPassword-box .button-container .generateBtn {
   background-color: #0dcb2d;
   color: #fff;
 }
-body main section .generatedPassword-box .button-container .generateBtn, body main section .generatedPassword-box .button-container .copyBtn {
+body main section .generatedPassword-box .button-container .generateBtn, body main section .generatedPassword-box .button-container .copyBtn, body main section .generatedPassword-box .button-container .againBtn {
   padding: 10px 25px;
   border: none;
   border-radius: 25px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
-body main section .generatedPassword-box .button-container .copyBtn:hover {
-  background-color: #dfdddd;
+body main section .generatedPassword-box .button-container .copyBtn:hover, body main section .generatedPassword-box .button-container .againBtn:hover {
+  background-color: #cfcfcf;
 }
 body main section .generatedPassword-box .button-container .generateBtn:hover {
   background-color: #0daa27;
